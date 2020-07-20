@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export class UuidControl extends React.Component {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    forID: PropTypes.string,
-    value: PropTypes.node,
-    classNameWrapper: PropTypes.string.isRequired,
-  }
-
-  static defaultProps = {
-    value: '',
-  }
 
   render() {
     const {
@@ -36,6 +26,18 @@ export class UuidControl extends React.Component {
     );
   }
 }
+
+UuidControl.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  forID: PropTypes.string,
+  value: PropTypes.node,
+  classNameWrapper: PropTypes.string.isRequired,
+}
+
+UuidControl.defaultProps = {
+  value: '',
+}
+
 
 export function UuidPreview({ value }) {
   return <div>{ value }</div>;
