@@ -1,8 +1,8 @@
-import { v1 } from 'uuid';
+import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export class Control extends React.Component {
+export class UuidControl extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     forID: PropTypes.string,
@@ -28,16 +28,16 @@ export class Control extends React.Component {
         type="hidden"
         id={forID}
         className={classNameWrapper}
-        value={value || v1()}
+        value={value || v4()}
         onChange={e => onChange(e.target.value.trim())}
       />
-      <div>{value || v1()}</div>
+      <div>{value || v4()}</div>
       </>
     );
   }
 }
 
-export function Preview({ value }) {
+export function UuidPreview({ value }) {
   return <div>{ value }</div>;
 }
 

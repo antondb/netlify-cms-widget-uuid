@@ -1,7 +1,11 @@
 {
-  "name": "netlify-cms-widget-uuid",
+  "name": "netlify-cms-widget-uuid-v4",
   "version": "1.0.0",
-  "description": "Generate a UUID for NetlifyCMS",
+  "description": "Generate a V4 UUID for NetlifyCMS",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/antondb/netlify-cms-widget-uuid"
+  },
   "main": "dist/main.js",
     "scripts": {
     "start": "webpack-serve --log-level error --open-path '/#/collections/test/entries/test'",

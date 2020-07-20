@@ -1,7 +1,7 @@
 import './bootstrap.js'
 import CMS, { init } from 'netlify-cms'
 import 'netlify-cms/dist/cms.css'
-import { Control, Preview } from '../src'
+import { UuidControl as Control, UuidPreview as Preview } from '../src'
 
 const config = {
   backend: {
