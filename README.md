@@ -8,12 +8,12 @@ NetlifyCMS offers the ability to add referential links between collections. It u
 
 1) Install the widget:
 ```
-npm i netlify-cms-widget-simple-uuid
+npm i netlify-cms-widget-uuid-v4
 ```
 
 2) Import the UUID widget in the netlifyCMS file:
 ```
-import {UuidControl, UuidPreview} from 'netlify-cms-widget-uuid';
+import {UuidControl, UuidPreview} from 'netlify-cms-widget-uuid-v4';
 ```
 
 3) Register the widget ready for use:
