@@ -41,6 +41,6 @@ export function UuidPreview({ value }) {
   return <div>{ value }</div>;
 }
 
-Preview.propTypes = {
+UuidPreview.propTypes = {
   value: PropTypes.node,
 };
