@@ -4,6 +4,10 @@ import React from 'react';
 
 export class UuidControl extends React.Component {
 
+  handleRegenerate(){
+
+  }
+
   render() {
     const {
       forID,
@@ -13,16 +17,17 @@ export class UuidControl extends React.Component {
     } = this.props;
 
     return (
-      <>
-      <input
-        type="hidden"
-        id={forID}
-        className={classNameWrapper}
-        value={value || v4()}
-        onChange={e => onChange(e.target.value.trim())}
-      />
-      <div>{value || v4()}</div>
-      </>
+      <div style={{ "display": "flex" }}>
+        <input
+          type="hidden"
+          id={forID}
+          className={classNameWrapper}
+          value={value || v4()}
+          onChange={e => onChange(e.target.value.trim())}
+        />
+        <div>{value || v4()}</div>
+        <button onClick={() => {onChange(v4()) }} style={{ marginLeft: "1em" }} >Regenerate ID</button>
+      </div >
     );
   }
 }
@@ -40,7 +45,7 @@ UuidControl.defaultProps = {
 
 
 export function UuidPreview({ value }) {
-  return <div>{ value }</div>;
+  return <div>{value}</div>;
 }
 
 UuidPreview.propTypes = {
