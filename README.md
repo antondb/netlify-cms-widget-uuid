@@ -5,6 +5,9 @@ Widgets are inputs for the Netlify CMS editor interface. It's a React component 
 
 NetlifyCMS offers the ability to add referential links between collections. It unfortunately does not provide a key widget to safely link between items.
 
+## Install
+
+As an npm package:
 
 1) Install the widget:
 ```
@@ -22,7 +25,17 @@ CMS.registerWidget('uuid', UuidControl, UuidPreview)
 
 ```
 
-4) Inside the YML collections file use the new widget.
+Via `script` tag:
+```html
+<script src="https://unpkg.com/netlify-cms-widget-uuid-v4@^1.0.12/dist/index.js"></script>
+<script type="text/javascript">
+  CMS.registerWidget('uuid', uuidWidget.UuidControl, uuidWidget.UuidPreview)
+</script>
+```
+
+## How to use
+
+Inside the YML collections file use the new widget.
 
 ```
 collections:
